@@ -5,29 +5,32 @@ import './App.css';
 
 
 
-function App() {  
+class App extends Component {  
   constructor(props) {
     super(props);
     this.state = {
-    rolls: [],
-    rollSum: null,
+    roll:[],
   } 
+  this.Roll20 = this.Roll20.bind(this)
 }
 
-  Roll20 = () => {
-    let rolls = [];
-    let rollSum = 1;
-    for (let i = 0; i < 20; i++) {
-      rolls[i] = Math.floor(Math.random() * 20) + 1;
-      rollSum += rolls[i];
-    }
-    this.setState({
-       rolls,
-        rollSum})
 
-
-    // Math.random()*(20-1) + 1;
-    // return display.getElementById(results)
+    
+   Roll20 = () => {
+     let numbers = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"];
+     let roll = [];
+        for (let numberIndex = 0; numberIndex < numbers.length; numberIndex++) {
+          roll.push({
+            number: numbers[numberIndex]
+          });
+      }
+    };
+   
+   RandomRoll = () => {
+   Math.floor(Math.random(numbers));
+   
+   }
+   
   } 
 
   return (
@@ -44,17 +47,9 @@ function App() {
    </nav> 
    
      <section>
-  {[1, 2, 3, 4, 5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].map(number => {
-    return (
-      <button
-        key={number}
-        onClick={() => this.diceRoll(number)}
-
-      >
+      <button  onClick={() => this.diceRoll(number)}>
         {this.props.number}
         </button>
-    );
-  })}
      </section>
     </div>
   );
