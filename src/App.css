@@ -12,6 +12,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-content: space-between;
+  padding: 2em;
 }
 
 

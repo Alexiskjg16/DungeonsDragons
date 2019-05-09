@@ -89,7 +89,7 @@ class App extends Component {
    render() {
   return (
     <div className="App">
- <header><h1>Dungeons and Dragons!</h1></header>
+ <header><h1>Roll the Dice!</h1></header>
  <nav>
   <section className="idvDice">
   <span>D20</span>
