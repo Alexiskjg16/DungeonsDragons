@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
+import largestsided from './Pics/20sided.jpg';
+import secondsided from './Pics/12sided.png';
+import thirdsided from './Pics/10sideddie.png';
+import fourthsided from './Pics/8sided.png';
+import fivesided from './Pics/6sided.png';
+import sixsided from './Pics/4sided.png';
 
 
 
@@ -85,20 +91,41 @@ class App extends Component {
     <div className="App">
  <header><h1>Dungeons and Dragons!</h1></header>
  <nav>
-   <button onClick={this.setIcosagon}>D20</button>
-   <span>{this.state.currentIcosagon}</span>
-   <button onClick={this.setDodecagon}>D12</button>
-   <span>{this.state.currentDodecagon}</span>
-   <button onClick={this.setDecagon}>D10</button>
-   <span>{this.state.currentDecagon}</span>
-   <button onClick={this.setHectogon}>D100</button>
-   <span>{this.state.currentHectogon}</span>
-   <button onClick={this.setOctogon}>D8</button>
-   <span>{this.state.currentOctogon}</span>
-   <button onClick={this.setHexagon}>D6</button>
-   <span>{this.state.currentHexagon}</span>
-   <button onClick={this.setQuadrilateral}>D4</button>
-   <span>{this.state.currentQuadrilateral}</span>
+  <section className="idvDice">
+  <span>D20</span>
+   <span onClick={this.setIcosagon}><img src={largestsided} className="diepic1" alt="D20"/></span>
+   <span className="d20die">{this.state.currentIcosagon}</span>
+   </section>
+   <section className="idvDice">
+   <span>D12</span>
+   <span onClick={this.setDodecagon}><img src={secondsided} className="diepic2" alt="D12"/></span>
+   <span className="d20die">{this.state.currentDodecagon}</span>
+   </section>
+   <section className="idvDice">
+   <span>D10</span>
+   <span onClick={this.setDecagon}><img src={thirdsided} className="diepic3" alt="D10"/></span>
+   <span className="d20die">{this.state.currentDecagon}</span>
+   </section>
+   <section className="idvDice">
+   <span>D100</span>
+   <span onClick={this.setHectogon}><img src={thirdsided} className="diepic4" alt="D100"/></span>
+   <span className="d20die">{this.state.currentHectogon}</span>
+   </section>
+   <section className="idvDice">
+   <span>D8</span>
+   <span onClick={this.setOctogon}><img src={fourthsided} className="diepic5" alt="D8"/></span>
+   <span className="d20die">{this.state.currentOctogon}</span>
+   </section>
+   <section className="idvDice">
+   <span>D6</span>
+   <span onClick={this.setHexagon}><img src={fivesided} className="diepic6" alt="D6"/></span>
+   <span className="d20die">{this.state.currentHexagon}</span>
+   </section>
+   <section className="idvDice">
+   <span>D4</span>
+   <span onClick={this.setQuadrilateral}><img src={sixsided} className="diepic7" alt="D4"/></span>
+   <span className="d20die">{this.state.currentQuadrilateral}</span>
+   </section>
    </nav> 
    
 
