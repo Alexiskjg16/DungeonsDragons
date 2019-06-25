@@ -24,6 +24,7 @@ class App extends Component {
     } 
   }
 
+  
     setIcosagon = () => {
       this.setState({
         currentIcosagon: Math.ceil(Math.random() *  20)
@@ -89,7 +90,9 @@ class App extends Component {
    render() {
   return (
     <div className="App">
- <header><h1>Roll the Dice!</h1></header>
+ <header className='header'>
+   <h1 className='sponsored'>Sponsored by <a href="https://stpetearcadebar.com/">Right Around The Corner</a></h1>
+   <h1 className='title'>Roll the Dice!</h1></header>
  <nav>
   <section className="idvDice">
   <span>D20</span>
@@ -127,7 +130,8 @@ class App extends Component {
    <span className="d20die">{this.state.currentQuadrilateral}</span>
    </section>
    </nav> 
-   
+   <footer className="footer"><h6>© Alexis Grisham 2019</h6>
+     </footer>
 
     </div>
   );
